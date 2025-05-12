@@ -70,35 +70,35 @@ function App() {
       <div className="w-full flex flex-col  justify-center items-center shadow-lg ">
 
         {!connected ? (
-          <div className="bg-white w-1/3 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-center text-black">Chat Room</h2>
-            <input
-              ref={usernameInputRef}
-              type="text"
-              placeholder="Enter Your Name"
-              className="w-full px-3 py-2 border rounded-md mb-3"
-            />
-            <div className="flex gap-2 mb-4">
-              <input
-                ref={roomInputRef}
-                type="text"
-                placeholder="Enter Room ID"
-                className="flex-1 px-3 py-2 border rounded-md"
-              />
-              <button
-                onClick={generateRoomId}
-                className="bg-black hover:bg-gray-400  hover:text-black text-white px-4 py-2 rounded-md"
-              >
-                Genrate ID
-              </button>
-            </div>
-            <button
-              onClick={joinRoom}
-              className="w-full bg-black hover:bg-gray-400  hover:text-black text-white py-2 rounded-md"
-            >
-              Join Room
-            </button>
-          </div>
+          <div className="bg-white w-full max-w-md p-6 rounded-lg">
+    <h2 className="text-xl font-bold mb-4 text-center text-black">Chat Room</h2>
+    <input
+      ref={usernameInputRef}
+      type="text"
+      placeholder="Enter Your Name"
+      className="w-full px-3 py-2 border rounded-md mb-3"
+    />
+    <div className="flex flex-col sm:flex-row gap-2 mb-4">
+      <input
+        ref={roomInputRef}
+        type="text"
+        placeholder="Enter Room ID"
+        className="flex-1 px-3 py-2 border rounded-md"
+      />
+      <button
+        onClick={generateRoomId}
+        className="bg-black hover:bg-gray-400 hover:text-black text-white px-4 py-2 rounded-md"
+      >
+        Generate ID
+      </button>
+    </div>
+    <button
+      onClick={joinRoom}
+      className="w-full bg-black hover:bg-gray-400 hover:text-black text-white py-2 rounded-md"
+    >
+      Join Room
+    </button>
+  </div>
         ) : (
           <>
             <div className="w-full min-h-screen flex flex-col px-4 py-6">
