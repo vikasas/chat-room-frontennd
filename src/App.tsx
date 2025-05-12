@@ -81,34 +81,38 @@ function App() {
       <div className="w-full max-w-md flex flex-col shadow-lg">
         {!connected ? (
           <div className="bg-white w-full p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-center text-black">Chat Room</h2>
-            <input
-              ref={usernameInputRef}
-              type="text"
-              placeholder="Enter Your Name"
-              className="w-full px-3 py-2 border rounded-md mb-3"
-            />
-            <div className="flex gap-2 mb-4">
-              <input
-                ref={roomInputRef}
-                type="text"
-                placeholder="Enter Room ID"
-                className="flex-1 px-3 py-2 border rounded-md"
-              />
-              <button
-                onClick={generateRoomId}
-                className="bg-black hover:bg-gray-400 hover:text-black text-white px-4 py-2 rounded-md"
-              >
-                Generate ID
-              </button>
-            </div>
-            <button
-              onClick={joinRoom}
-              className="w-full bg-black hover:bg-gray-400 hover:text-black text-white py-2 rounded-md"
-            >
-              Join Room
-            </button>
-          </div>
+  <h2 className="text-xl font-bold mb-4 text-center text-black">Chat Room</h2>
+  
+  <input
+    ref={usernameInputRef}
+    type="text"
+    placeholder="Enter Your Name"
+    className="w-full px-3 py-2 border rounded-md mb-3"
+  />
+  
+  <div className="flex flex-col sm:flex-row gap-2 mb-4">
+    <input
+      ref={roomInputRef}
+      type="text"
+      placeholder="Enter Room ID"
+      className="w-full sm:flex-1 px-3 py-2 border rounded-md"
+    />
+    <button
+      onClick={generateRoomId}
+      className="w-full sm:w-auto bg-black hover:bg-gray-400 hover:text-black text-white px-4 py-2 rounded-md"
+    >
+      Generate ID
+    </button>
+  </div>
+  
+  <button
+    onClick={joinRoom}
+    className="w-full bg-black hover:bg-gray-400 hover:text-black text-white py-2 rounded-md"
+  >
+    Join Room
+  </button>
+</div>
+
         ) : (
           <div className="w-full min-h-screen flex flex-col px-4 py-6">
             <div className="text-white text-center text-xl mb-4">
@@ -141,7 +145,7 @@ function App() {
                 ref={messageInputRef}
                 type="text"
                 placeholder="Type a message..."
-                className="flex-1 text-white bg-gray-800 px-3 py-2 border rounded-md"
+                className="flex-1 text-white bg-black px-3 py-2 border rounded-md"
               />
               <button
                 onClick={sendMessage}
