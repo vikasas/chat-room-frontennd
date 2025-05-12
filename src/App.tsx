@@ -25,7 +25,8 @@ function App() {
       return;
     }
 
-    socketRef.current = new WebSocket('ws://localhost:8080');
+    socketRef.current = new WebSocket('wss://chat-room-backend-klyn.onrender.com');
+    
 
     socketRef.current.onopen = () => {
       socketRef.current?.send(
