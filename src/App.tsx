@@ -1,3 +1,4 @@
+
 import { useState, useRef } from "react";
 
 interface ChatMessage {
@@ -31,7 +32,7 @@ function App() {
     }
    
 
-    socketRef.current = new WebSocket(" wss://chat-room-backend-klyn.onrender.com");
+    socketRef.current = new WebSocket("wss://chat-room-backend-klyn.onrender.com");
 
     socketRef.current.onopen = () => {
       socketRef.current?.send(
